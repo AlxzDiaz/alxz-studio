@@ -2,6 +2,10 @@
 
 > 03:00 — somewhere between code & imagination.
 
+**En vivo:** https://alxz-studio.netlify.app · Repositorio: https://github.com/AlxzDiaz/alxz-studio
+
+Cada `git push` a `main` se publica solo en Netlify.
+
 Sitio estático (HTML + CSS + JS, sin dependencias) construido a partir de `ALXZ_BRIEF_MAESTRO_CLAUDE.md` y `ALXZ_identidad.md`.
 
 ```
