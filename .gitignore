@@ -1,0 +1,5 @@
+# Configuración local de vista previa
+.claude/
+
+# Kit de Instagram: se usa desde esta carpeta, no forma parte del sitio
+instagram/

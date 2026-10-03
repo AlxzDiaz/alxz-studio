@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALXZ// — Digital Studio</title>
+<meta name="description" content="ALXZ// Digital Studio. Websites · Design · Code. 03:00 — somewhere between code & imagination. Desde Puerto Maldonado, PE, para negocios de todo el Perú y el mundo.">
+<meta name="theme-color" content="#050505">
+<link rel="canonical" href="https://alxz-studio.netlify.app/">
+<!-- Vista previa al compartir el enlace (WhatsApp, Instagram, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALXZ// Digital Studio">
+<meta property="og:title" content="ALXZ// — Digital Studio">
+<meta property="og:description" content="Websites · Design · Code. Páginas web con identidad, desde Puerto Maldonado para todo el Perú y el mundo.">
+<meta property="og:url" content="https://alxz-studio.netlify.app/">
+<meta property="og:image" content="https://alxz-studio.netlify.app/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Símbolo de luna reutilizable -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="moon" viewBox="0 0 64 64">
+    <path d="M38 8a24 24 0 1 0 18 38A20 20 0 1 1 38 8z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav__logo" aria-label="ALXZ// inicio">ALXZ<span>//</span></a>
+
+  <nav class="nav__links" id="navLinks" aria-label="Principal">
+    <a href="#home" class="is-active">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <span class="nav__time mono" aria-hidden="true">03:00</span>
+
+  <button class="nav__toggle mono" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+    <span class="nav__toggle-open">Menu</span><span class="nav__toggle-close">Close</span>
+  </button>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home" aria-label="ALXZ// Digital Studio">
+    <div class="hero__media" aria-hidden="true">
+      <img class="hero__img" data-parallax
+           src="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=2000&q=70"
+           srcset="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=900&q=70 900w,
+                   https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=1600&q=70 1600w,
+                   https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=2400&q=65 2400w"
+           sizes="100vw" alt="">
+    </div>
+
+    <div class="hero__content">
+      <svg class="hero__moon h-in" style="--d:.5s"><use href="#moon"/></svg>
+      <h1 class="hero__title h-in" style="--d:.9s">ALXZ<span>//</span></h1>
+      <p class="hero__studio mono h-in" style="--d:1.3s">Digital Studio</p>
+      <p class="hero__what h-in" style="--d:1.6s">Websites <i>·</i> Design <i>·</i> Code</p>
+      <p class="signature h-in" style="--d:2s">
+        <span class="mono">03:00</span> — somewhere between<br>code &amp; imagination.
+      </p>
+    </div>
+
+    <div class="hero__foot mono h-in" style="--d:2.4s">
+      <span>Puerto Maldonado, PE <i class="remote">· Remoto a todo el mundo</i></span>
+      <span class="hero__social">
+        <a href="https://github.com/AlxzDiaz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://instagram.com/alxzstudio" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/51944870026?text=Hola%2C%20vengo%20de%20la%20web%20de%20ALXZ%2F%2F%20y%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">WhatsApp</a>
+      </span>
+    </div>
+
+    <a href="#about" class="hero__scroll mono h-in" style="--d:2.8s" aria-label="Bajar a About">↓</a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="about__text">
+      <p class="label mono reveal">About</p>
+
+      <div class="about__mark reveal">
+        <h2 class="logo-serif">ALXZ<span>//</span></h2>
+        <p class="mono kicker">Digital Studio</p>
+      </div>
+
+      <div class="about__body reveal">
+        <p class="lead">Soy Alexzandro.</p>
+        <p>Desarrollo páginas web y experimento con diseño, código e interfaces digitales.</p>
+        <p>ALXZ// nació como un espacio para juntar varias cosas que siempre me han interesado: tecnología, programación, cine, literatura y diseño.</p>
+        <p>No intento hacer páginas que solamente <em>“funcionen”</em>.<br>Me interesa que también tengan una identidad.</p>
+      </div>
+
+      <p class="signature reveal"><span class="mono">03:00</span> — somewhere between<br>code &amp; imagination.</p>
+    </div>
+
+    <figure class="about__photo reveal">
+      <div class="tint">
+        <img src="https://images.unsplash.com/photo-1762004793160-76327a519c0b?auto=format&fit=crop&w=900&h=1200&q=70"
+             srcset="https://images.unsplash.com/photo-1762004793160-76327a519c0b?auto=format&fit=crop&w=600&h=800&q=70 600w,
+                     https://images.unsplash.com/photo-1762004793160-76327a519c0b?auto=format&fit=crop&w=1100&h=1466&q=70 1100w"
+             sizes="(max-width: 860px) 100vw, 40vw"
+             alt="Calle nocturna con cables eléctricos y un semáforo encendido en rojo" loading="lazy">
+      </div>
+      <svg class="about__moon" aria-hidden="true"><use href="#moon"/></svg>
+    </figure>
+
+    <p class="about__vertical mono" aria-hidden="true">Puerto Maldonado, PE</p>
+
+    <ul class="about__tags mono" aria-label="Intereses">
+      <li>Night</li><li>Code</li><li>Cinema</li><li>Literature</li><li>Design</li>
+    </ul>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects section" id="projects">
+    <header class="section-head reveal">
+      <h2 class="label mono">Projects</h2>
+      <span class="section-head__line" aria-hidden="true"></span>
+      <span class="mono dim">01 — 04</span>
+    </header>
+
+    <p class="projects__intro reveal">Cuatro negocios de Puerto Maldonado.<br>Dos propuestas para cada uno: <em>una esencial</em> y <em>una más elaborada</em>.</p>
+
+    <!-- 01 -->
+    <article class="work">
+      <div class="work__info reveal">
+        <p class="work__num mono">01</p>
+        <h3 class="work__title">Sabor Amazónico</h3>
+        <p class="work__cat">Restaurante · Comida amazónica</p>
+        <p class="work__desc">Carta con fotos de juane, tacacho y paiche, y pedidos por WhatsApp con delivery y pago por Yape o Plin.</p>
+        <p class="work__stack mono">HTML · CSS · JavaScript · Netlify</p>
+      </div>
+      <div class="work__shots">
+        <a class="shot reveal" href="https://alxz-restaurante.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-restaurante.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-restaurante-desk.jpg" width="1200" height="750" alt="Portada del sitio de Sabor Amazónico, versión esencial" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">A</b> / Esencial</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">Carta con fotos y pedido directo por WhatsApp.</p>
+        </a>
+        <a class="shot reveal" href="https://alxz-restaurante-chicha.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-restaurante-chicha.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-restaurante-chicha-desk.jpg" width="1200" height="750" alt="Portada del sitio de Sabor Amazónico, versión Cartel Chicha" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">B</b> / Cartel Chicha</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">La misma carta convertida en un cartel chicha, con su propia comanda.</p>
+        </a>
+      </div>
+    </article>
+
+    <!-- 02 -->
+    <article class="work">
+      <div class="work__info reveal">
+        <p class="work__num mono">02</p>
+        <h3 class="work__title">Hotel Aguaje</h3>
+        <p class="work__cat">Hotel · Centro de la ciudad</p>
+        <p class="work__desc">Habitaciones, tarifas y reserva directa por WhatsApp para un hotel con aire acondicionado, desayuno buffet y recepción 24 h.</p>
+        <p class="work__stack mono">HTML · CSS · JavaScript · Netlify</p>
+      </div>
+      <div class="work__shots">
+        <a class="shot reveal" href="https://alxz-hotel.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-hotel.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-hotel-desk.jpg" width="1200" height="750" alt="Portada del sitio de Hotel Aguaje, versión esencial" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">A</b> / Esencial</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">Buscador de fechas, tipos de habitación y tarifas.</p>
+        </a>
+        <a class="shot reveal" href="https://alxz-hotel-premium.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-hotel-premium.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-hotel-premium-desk.jpg" width="1200" height="750" alt="Portada del sitio de Hotel Aguaje, versión Del día a la noche" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">B</b> / Del día a la noche</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">El saludo y el ambiente siguen la hora de Puerto Maldonado.</p>
+        </a>
+      </div>
+    </article>
+
+    <!-- 03 -->
+    <article class="work">
+      <div class="work__info reveal">
+        <p class="work__num mono">03</p>
+        <h3 class="work__title">Casa Lupuna</h3>
+        <p class="work__cat">Hostal · Puerta a Tambopata</p>
+        <p class="work__desc">Hostal a tres cuadras de la Plaza de Armas, con piscina, desayuno y tours a Tambopata. Reserva directa, sin comisiones de apps.</p>
+        <p class="work__stack mono">HTML · CSS · JavaScript · Netlify</p>
+      </div>
+      <div class="work__shots">
+        <a class="shot reveal" href="https://alxz-hostal.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-hostal.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-hostal-desk.jpg" width="1200" height="750" alt="Portada del sitio de Casa Lupuna, versión esencial" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">A</b> / Esencial</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">Fechas, cuartos y reserva por WhatsApp.</p>
+        </a>
+        <a class="shot reveal" href="https://alxz-hostal-pro.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-hostal-pro.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-hostal-pro-desk.jpg" width="1200" height="750" alt="Portada del sitio de Casa Lupuna, versión Campamento base" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">B</b> / Campamento base</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">Portada en vivo con hora y clima, viaje armado día por día y pase de reserva.</p>
+        </a>
+      </div>
+    </article>
+
+    <!-- 04 -->
+    <article class="work">
+      <div class="work__info reveal">
+        <p class="work__num mono">04</p>
+        <h3 class="work__title">Wayra Studio</h3>
+        <p class="work__cat">Tienda de ropa · Lino y estampados</p>
+        <p class="work__desc">Ropa fresca para el calor de la selva, con tallas, pedido por WhatsApp y envíos a todo el Perú.</p>
+        <p class="work__stack mono">HTML · CSS · JavaScript · Netlify</p>
+      </div>
+      <div class="work__shots">
+        <a class="shot reveal" href="https://alxz-tienda-ropa.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-tienda-ropa.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-tienda-ropa-desk.jpg" width="1200" height="750" alt="Portada del sitio de Wayra Studio, versión esencial" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">A</b> / Esencial</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">Catálogo con tallas y pedido por WhatsApp.</p>
+        </a>
+        <a class="shot reveal" href="https://alxz-tienda-boutique.netlify.app/" target="_blank" rel="noopener">
+          <div class="shot__frame">
+            <div class="shot__bar mono" aria-hidden="true"><i></i><i></i><i></i><span>alxz-tienda-boutique.netlify.app</span></div>
+            <div class="shot__img"><img src="images/projects/alxz-tienda-boutique-desk.jpg" width="1200" height="750" alt="Portada del sitio de Wayra Studio, versión Boutique" loading="lazy"></div>
+          </div>
+          <div class="shot__cap"><span><b class="mono">B</b> / Boutique</span><span class="shot__go">Ver demo <b>↗</b></span></div>
+          <p class="shot__note">Estilista virtual, calculadora de talla y empaque de regalo.</p>
+        </a>
+      </div>
+    </article>
+
+    <p class="projects__note mono dim reveal">Concept projects — negocios ficticios. Los demos están publicados y se pueden usar completos.</p>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services section" id="services">
+    <div class="services__list">
+      <h2 class="label mono reveal">Services</h2>
+      <ol>
+        <li class="reveal"><h3><span class="mono">01</span> / Landing pages</h3><p>Una página para presentar un negocio, producto o servicio.<a class="svc-ex mono" href="https://alxz-restaurante.netlify.app/" target="_blank" rel="noopener">ej. Sabor Amazónico ↗</a></p></li>
+        <li class="reveal"><h3><span class="mono">02</span> / Business websites</h3><p>Sitios web completos para negocios que necesitan presencia digital.<a class="svc-ex mono" href="https://alxz-hotel-premium.netlify.app/" target="_blank" rel="noopener">ej. Hotel Aguaje ↗</a></p></li>
+        <li class="reveal"><h3><span class="mono">03</span> / Digital catalogs</h3><p>Catálogos digitales para mostrar productos y facilitar el contacto.<a class="svc-ex mono" href="https://alxz-tienda-boutique.netlify.app/" target="_blank" rel="noopener">ej. Wayra Studio ↗</a></p></li>
+        <li class="reveal"><h3><span class="mono">04</span> / UI / Web design</h3><p>Diseño de interfaces y experiencia de usuario.<a class="svc-ex mono" href="https://alxz-hostal-pro.netlify.app/" target="_blank" rel="noopener">ej. Casa Lupuna ↗</a></p></li>
+        <li class="reveal"><h3><span class="mono">05</span> / Maintenance</h3><p>Actualizaciones, cambios y soporte para el sitio web.</p></li>
+      </ol>
+    </div>
+
+    <div class="services__who reveal">
+      <h2 class="label mono">¿Para quién?</h2>
+      <ul class="who">
+        <li>Restaurantes.</li><li>Hoteles.</li><li>Lodges.</li><li>Tiendas.</li>
+        <li>Emprendimientos.</li><li>Profesionales.</li><li>Proyectos personales.</li>
+      </ul>
+      <p class="who__close">Si tienes algo que mostrar,<br>podemos construir el espacio<br>para mostrarlo.</p>
+      <p class="who__where mono">Desde Puerto Maldonado <span>→</span> todo el Perú y otros países</p>
+      <p class="signature"><span class="mono">03:00</span> — somewhere between<br>code &amp; imagination.</p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section" id="contact">
+    <h2 class="label mono reveal">Contact</h2>
+
+    <div class="contact__grid">
+      <div class="reveal">
+        <p class="contact__intro">¿Cómo debería sentirse<br>cuando alguien entre?</p>
+        <p class="contact__where">Trabajo a distancia con negocios de cualquier parte del Perú o de otro país. Conversamos por WhatsApp o correo, estés donde estés.</p>
+      </div>
+
+      <ul class="contact__list">
+        <li class="reveal">
+          <a href="https://wa.me/51944870026?text=Hola%2C%20vengo%20de%20la%20web%20de%20ALXZ%2F%2F%20y%20quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.2L4 20z"/><path d="M9 9.5c.3 2 2.5 4.2 4.5 4.5l1-1 1.7.8-.4 1.2c-3.2.4-6.6-3-6.2-6.2l1.2-.4.8 1.7-1 1z" stroke-width="1"/></svg>
+            <span><b>WhatsApp</b><small class="mono">+51 944 870 026</small></span>
+            <i>→</i>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://instagram.com/alxzstudio" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r=".6"/></svg>
+            <span><b>Instagram</b><small class="mono">@alxzstudio</small></span>
+            <i>↗</i>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://github.com/AlxzDiaz" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-5.5-2.5M14.5 21v-3.3c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6.2 0C6.1 3 5.1 3.3 5.1 3.3a4.3 4.3 0 0 0-.1 3.2 4.6 4.6 0 0 0-1.3 3.2c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            <span><b>GitHub</b><small class="mono">AlxzDiaz</small></span>
+            <i>↗</i>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=alxzstudiod@gmail.com&amp;su=Proyecto%20web" target="_blank" rel="noopener" data-copy="alxzstudiod@gmail.com">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="1"/><path d="M4 6.5l8 6.5 8-6.5"/></svg>
+            <span><b>Email</b><small class="mono">alxzstudiod@gmail.com</small></span>
+            <i>↗</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__brand">
+    <p class="footer__logo"><svg><use href="#moon"/></svg> ALXZ<span>//</span></p>
+    <p class="mono kicker">Digital Studio</p>
+    <p class="footer__what">Websites · Design · Code</p>
+  </div>
+  <p class="signature"><span class="mono">03:00</span> — somewhere between<br>code &amp; imagination.</p>
+  <div class="footer__meta mono">
+    <span>Puerto Maldonado, PE · Remoto a todo el mundo</span>
+    <span>© 2026 ALXZ//</span>
+  </div>
+  <!-- Créditos fotográficos: Unsplash — Nikita Kachanovsky (hero), Andrei Andreew (about), Puru Raj (libro) -->
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
