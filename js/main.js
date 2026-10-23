@@ -119,6 +119,32 @@
     });
   });
 
+  /* ---------- Proyectos en celular: pestañas A/B en vez de dos capturas apiladas ---------- */
+  document.querySelectorAll('.work__shots').forEach(function (cont, n) {
+    var shots = cont.querySelectorAll('.shot');
+    if (shots.length < 2) return;
+    var tabs = document.createElement('div');
+    tabs.className = 'shot-tabs';
+    tabs.setAttribute('role', 'tablist');
+    tabs.setAttribute('aria-label', 'Versiones del proyecto');
+    shots.forEach(function (shot, i) {
+      shot.id = shot.id || 'shot-' + n + '-' + i;
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-controls', shot.id);
+      b.textContent = shot.querySelector('.shot__cap span').textContent.replace(/\s+/g, ' ').trim();
+      b.addEventListener('click', function () {
+        shots.forEach(function (s, j) { s.classList.toggle('is-activa', j === i); });
+        tabs.querySelectorAll('button').forEach(function (x, j) { x.setAttribute('aria-selected', String(j === i)); });
+      });
+      tabs.appendChild(b);
+    });
+    cont.setAttribute('data-tabs', '');
+    cont.parentNode.insertBefore(tabs, cont);
+    tabs.querySelector('button').click();
+  });
+
   /* ---------- Cotizador: arma el mensaje de WhatsApp en vivo ---------- */
   var form = document.getElementById('quoteForm');
   var msgBox = document.getElementById('quoteMsg');
