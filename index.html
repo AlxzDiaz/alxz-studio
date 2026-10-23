@@ -24,6 +24,8 @@
 <link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<!-- Antes de pintar: evita que los .reveal aparezcan y desaparezcan al cargar main.js -->
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -42,8 +44,8 @@
 
   <nav class="nav__links" id="navLinks" aria-label="Principal">
     <a href="#home" class="is-active">Home</a>
-    <a href="#projects">Projects</a>
     <a href="#about">About</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -59,7 +61,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="home" aria-label="ALXZ// Digital Studio">
     <div class="hero__media" aria-hidden="true">
-      <img class="hero__img" data-parallax
+      <img class="hero__img" data-parallax fetchpriority="high"
            src="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=2000&q=70"
            srcset="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=900&q=70 900w,
                    https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=1600&q=70 1600w,

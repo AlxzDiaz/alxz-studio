@@ -13,7 +13,7 @@
   /* Blancos */
   --white: #E8E8E8;
   --text-2: #A0A0A0;
-  --text-3: #666666;
+  --text-3: #7D7D7D; /* mínimo que da contraste AA (4.5:1) sobre todos los negros */
 
   /* Rojos */
   --red: #8F1518;

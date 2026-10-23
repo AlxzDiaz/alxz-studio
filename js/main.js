@@ -2,12 +2,18 @@
 (function () {
   'use strict';
 
-  document.documentElement.classList.add('js');
+  // La clase .js ya la pone un script en el <head>, antes de pintar.
 
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var reduced = motionQuery.matches;
+  motionQuery.addEventListener('change', function (e) {
+    reduced = e.matches;
+    if (reduced && heroImg) heroImg.style.translate = '';
+  });
   var nav = document.getElementById('nav');
   var toggle = document.getElementById('navToggle');
   var links = document.querySelectorAll('.nav__links a');
+  var behindMenu = [document.getElementById('main'), document.querySelector('.footer')];
 
   /* ---------- Nav: fondo al hacer scroll ---------- */
   function onScrollNav() {
@@ -19,7 +25,14 @@
     nav.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
+    // Con el menú a pantalla completa, el teclado no debe llegar al contenido de detrás.
+    behindMenu.forEach(function (el) { if (el) el.inert = open; });
   }
+  // Por encima de 860px el botón desaparece (CSS): si el menú quedó abierto al
+  // girar la tablet o agrandar la ventana, la página se quedaría sin scroll.
+  window.matchMedia('(min-width: 861px)').addEventListener('change', function (e) {
+    if (e.matches && nav.classList.contains('is-open')) setMenu(false);
+  });
   toggle.addEventListener('click', function () {
     setMenu(toggle.getAttribute('aria-expanded') !== 'true');
   });
@@ -32,20 +45,12 @@
 
   /* ---------- Parallax muy leve en el hero ---------- */
   var heroImg = document.querySelector('[data-parallax]');
-  var ticking = false;
   function parallax() {
     var y = window.scrollY;
     if (heroImg && y < window.innerHeight * 1.2) {
       heroImg.style.translate = '0 ' + (y * 0.12).toFixed(1) + 'px';
     }
-    ticking = false;
   }
-
-  window.addEventListener('scroll', function () {
-    onScrollNav();
-    if (!reduced && !ticking) { ticking = true; requestAnimationFrame(parallax); }
-  }, { passive: true });
-  onScrollNav();
 
   /* ---------- Reveal al hacer scroll ---------- */
   var reveals = document.querySelectorAll('.reveal');
@@ -83,7 +88,19 @@
     map[active.id].classList.add('is-active');
     map[active.id].setAttribute('aria-current', 'true');
   }
-  window.addEventListener('scroll', spy, { passive: true });
+
+  /* ---------- Un solo manejador de scroll, una vez por fotograma ---------- */
+  var ticking = false;
+  function onFrame() {
+    onScrollNav();
+    if (!reduced) parallax();
+    spy();
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onFrame); }
+  }, { passive: true });
+  onScrollNav();
   spy();
 
   /* ---------- Email: además de abrir Gmail, copia la dirección ---------- */
