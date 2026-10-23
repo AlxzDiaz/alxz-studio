@@ -18,14 +18,16 @@ instagram/         Kit de Instagram (ver instagram/textos.md)
 
 ## Proyectos (demos publicados en Netlify)
 
-| # | Negocio | A · Esencial | B · Elaborada |
+| # | Negocio | A · Clásica | B · Elaborada |
 |---|---|---|---|
 | 01 | Sabor Amazónico — restaurante | alxz-restaurante | alxz-restaurante-chicha (Cartel Chicha) |
 | 02 | Hotel Aguaje — hotel | alxz-hotel | alxz-hotel-premium (Del día a la noche) |
 | 03 | Casa Lupuna — hostal | alxz-hostal | alxz-hostal-pro (Campamento base) |
 | 04 | Wayra Studio — tienda de ropa | alxz-tienda-ropa | alxz-tienda-boutique (Boutique) |
 
-Todos en `https://<nombre>.netlify.app/`. Son negocios ficticios (concept projects).
+Todos en `https://<nombre>.netlify.app/`.
+
+Demo del **paquete Esencial** (landing de una página, sin carrito): `alxz-restaurante-esencial` (Sabor Amazónico · Esencial, repo `restaurante-esencial-landing`). Son negocios ficticios (concept projects).
 
 Si cambias el diseño de un demo, vuelve a tomar su captura y reemplaza el `.jpg` en `images/projects/`.
 
