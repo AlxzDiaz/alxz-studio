@@ -27,7 +27,7 @@ instagram/         Kit de Instagram (ver instagram/textos.md)
 
 Todos en `https://<nombre>.netlify.app/`.
 
-Demo del **paquete Esencial** (landing de una página, sin carrito): `alxz-restaurante-esencial` (Sabor Amazónico · Esencial, repo `restaurante-esencial-landing`). Son negocios ficticios (concept projects).
+Demo del **paquete Esencial** (landing de una página, sin carrito): `alxz-fruta-madre` (Fruta Madre, juguería; repo `fruta-madre-landing`). Son negocios ficticios (concept projects).
 
 Si cambias el diseño de un demo, vuelve a tomar su captura y reemplaza el `.jpg` en `images/projects/`.
 
