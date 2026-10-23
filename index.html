@@ -77,6 +77,7 @@
       <p class="signature h-in" style="--d:2s">
         <span class="mono">03:00</span> — somewhere between<br>code &amp; imagination.
       </p>
+      <a class="cta mono h-in" style="--d:2.2s" href="#cotizar">Cotiza tu proyecto <b aria-hidden="true">→</b></a>
     </div>
 
     <div class="hero__foot mono h-in" style="--d:2.4s">
@@ -259,7 +260,7 @@
   </section>
 
   <!-- ============ SERVICES ============ -->
-  <section class="services section" id="services">
+  <section class="services section" id="services" data-nav="projects">
     <div class="services__list">
       <h2 class="label mono reveal">Services</h2>
       <ol>
@@ -280,6 +281,141 @@
       <p class="who__close">Si tienes algo que mostrar,<br>podemos construir el espacio<br>para mostrarlo.</p>
       <p class="who__where mono">Desde Puerto Maldonado <span>→</span> todo el Perú y otros países</p>
       <p class="signature"><span class="mono">03:00</span> — somewhere between<br>code &amp; imagination.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS + FAQ ============ -->
+  <section class="process section" id="proceso" data-nav="contact">
+    <header class="section-head reveal">
+      <h2 class="label mono">Process</h2>
+      <span class="section-head__line" aria-hidden="true"></span>
+      <span class="mono dim">Cómo trabajo</span>
+    </header>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__num mono">01</span>
+        <h3 class="step__title">Conversamos</h3>
+        <p>Me cuentas de tu negocio, a quién quieres llegar y qué debería poder hacer la gente en tu web.</p>
+      </li>
+      <li class="step reveal" style="--rd:.1s">
+        <span class="step__num mono">02</span>
+        <h3 class="step__title">Propuesta</h3>
+        <p>Te envío qué incluye, el plazo y la cotización. Sin compromiso: decides con todo claro.</p>
+      </li>
+      <li class="step reveal" style="--rd:.2s">
+        <span class="step__num mono">03</span>
+        <h3 class="step__title">Diseño y código</h3>
+        <p>Construyo el sitio y vas viendo avances. Lo ajustamos juntos hasta que se sienta tuyo.</p>
+      </li>
+      <li class="step reveal" style="--rd:.3s">
+        <span class="step__num mono">04</span>
+        <h3 class="step__title">Publicación</h3>
+        <p>Lo publico con tu dominio, te enseño a usarlo y sigo disponible para cambios.</p>
+      </li>
+    </ol>
+
+    <div class="faq">
+      <div class="faq__head reveal">
+        <h2 class="label mono">FAQ</h2>
+        <p class="faq__intro">Lo que casi siempre<br>me preguntan primero.</p>
+      </div>
+      <div class="faq__list">
+        <details class="reveal">
+          <summary>¿Cuánto cuesta una página web?</summary>
+          <p>Depende de lo que necesites: no es lo mismo una landing de una sola página que un sitio con carta, reservas o catálogo. Por eso cada proyecto se cotiza. Cuéntame tu idea en el <a href="#cotizar">cotizador</a> y te respondo con una propuesta sin compromiso.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Cuánto tiempo toma?</summary>
+          <p>También depende del alcance: una landing es más rápida que un sitio completo. El plazo va escrito en la propuesta, antes de empezar.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Necesito tener dominio y hosting?</summary>
+          <p>No. Te ayudo a elegir y registrar tu dominio y me encargo de publicar el sitio.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Podré cambiar textos, precios o fotos después?</summary>
+          <p>Sí. Puedes pedirme cambios cuando los necesites o acordar un plan de mantenimiento.</p>
+        </details>
+        <details class="reveal">
+          <summary>¿Trabajas solo en Puerto Maldonado?</summary>
+          <p>No. Trabajo a distancia con negocios de todo el Perú y de otros países: todo se coordina por WhatsApp o correo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE ============ -->
+  <section class="quote section" id="cotizar" data-nav="contact">
+    <header class="section-head reveal">
+      <h2 class="label mono">Quote</h2>
+      <span class="section-head__line" aria-hidden="true"></span>
+      <span class="mono dim">Cotiza en 1 minuto</span>
+    </header>
+
+    <div class="quote__grid">
+      <form class="quote__form reveal" id="quoteForm" novalidate>
+        <p class="quote__intro">Elige lo que se parezca a tu proyecto.<br>El mensaje se arma solo.</p>
+
+        <fieldset>
+          <legend class="mono">Tu negocio</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="negocio" value="Restaurante"><span>Restaurante</span></label>
+            <label class="chip"><input type="radio" name="negocio" value="Hotel / hostal"><span>Hotel / hostal</span></label>
+            <label class="chip"><input type="radio" name="negocio" value="Tienda"><span>Tienda</span></label>
+            <label class="chip"><input type="radio" name="negocio" value="Emprendimiento"><span>Emprendimiento</span></label>
+            <label class="chip"><input type="radio" name="negocio" value="Profesional independiente"><span>Profesional</span></label>
+            <label class="chip"><input type="radio" name="negocio" value="Otro"><span>Otro</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="mono">Qué necesitas</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="tipo" value="Landing page"><span>Landing page</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="Sitio web completo"><span>Sitio web completo</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="Catálogo digital"><span>Catálogo digital</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="Mejorar mi web actual"><span>Mejorar mi web</span></label>
+            <label class="chip"><input type="radio" name="tipo" value="Aún no lo sé"><span>Aún no lo sé</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="mono">Qué debería tener <span class="dim">(opcional)</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="extra" value="pedidos o reservas por WhatsApp"><span>Pedidos / reservas por WhatsApp</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="carta o catálogo con fotos"><span>Carta o catálogo con fotos</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="mapa, horarios y ubicación"><span>Mapa y horarios</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="dominio propio (.com / .pe)"><span>Dominio propio</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="versión en inglés"><span>Versión en inglés</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="mono">Para cuándo</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="cuando" value="sin apuro"><span>Sin apuro</span></label>
+            <label class="chip"><input type="radio" name="cuando" value="este mes"><span>Este mes</span></label>
+            <label class="chip"><input type="radio" name="cuando" value="lo antes posible"><span>Lo antes posible</span></label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span class="mono">Nombre del negocio <span class="dim">(opcional)</span></span>
+          <input type="text" name="nombre" maxlength="60" autocomplete="organization">
+        </label>
+        <label class="field">
+          <span class="mono">Algo más que quieras contarme <span class="dim">(opcional)</span></span>
+          <textarea name="detalle" rows="3" maxlength="400"></textarea>
+        </label>
+      </form>
+
+      <div class="quote__preview reveal" style="--rd:.15s">
+        <p class="mono quote__preview-label">Tu mensaje</p>
+        <pre class="quote__msg" id="quoteMsg" aria-live="polite"></pre>
+        <a class="cta cta--solid mono" id="quoteSend" href="https://wa.me/51944870026?text=Hola%2C%20vengo%20de%20la%20web%20de%20ALXZ%2F%2F%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener">Enviar por WhatsApp <b aria-hidden="true">↗</b></a>
+        <p class="quote__note">Respondo personalmente. La cotización es gratis y sin compromiso.</p>
+      </div>
     </div>
   </section>
 

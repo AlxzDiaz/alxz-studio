@@ -68,12 +68,14 @@
   /* ---------- Estado activo de la navegación ---------- */
   var map = {};
   links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
-  var sections = ['home', 'about', 'projects', 'contact'] // orden del DOM
-    .map(function (id) { return document.getElementById(id); })
-    .filter(Boolean);
+  // Cada sección enciende su enlace del nav; las que no tienen uno propio lo
+  // indican con data-nav (Services → Projects; Process y Quote → Contact).
+  var sections = Array.prototype.filter.call(
+    document.querySelectorAll('main > section[id]'),
+    function (s) { return map[s.dataset.nav || s.id]; }
+  );
 
-  // La última sección del nav cuyo inicio ya pasó la mitad de la pantalla
-  // (Identity y Services quedan bajo Projects).
+  // La última sección cuyo inicio ya pasó la mitad de la pantalla.
   var current = null;
   function spy() {
     var mid = window.innerHeight * 0.45;
@@ -82,11 +84,12 @@
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
       active = sections[sections.length - 1];
     }
-    if (active === current) return;
-    current = active;
+    var link = map[active.dataset.nav || active.id];
+    if (link === current) return;
+    current = link;
     links.forEach(function (a) { a.classList.remove('is-active'); a.removeAttribute('aria-current'); });
-    map[active.id].classList.add('is-active');
-    map[active.id].setAttribute('aria-current', 'true');
+    link.classList.add('is-active');
+    link.setAttribute('aria-current', 'true');
   }
 
   /* ---------- Un solo manejador de scroll, una vez por fotograma ---------- */
@@ -115,6 +118,38 @@
       }).catch(function () {});
     });
   });
+
+  /* ---------- Cotizador: arma el mensaje de WhatsApp en vivo ---------- */
+  var form = document.getElementById('quoteForm');
+  var msgBox = document.getElementById('quoteMsg');
+  var send = document.getElementById('quoteSend');
+  if (form && msgBox && send) {
+    var waBase = send.href.split('?')[0];
+    var buildMessage = function () {
+      var f = form.elements;
+      var checked = function (name) {
+        return Array.prototype.filter.call(form.querySelectorAll('input[name="' + name + '"]'),
+          function (i) { return i.checked; }).map(function (i) { return i.value; });
+      };
+      var negocio = checked('negocio')[0];
+      var nombre = f.nombre.value.trim();
+      var lines = ['Hola, vengo de la web de ALXZ// y quiero cotizar un proyecto.', ''];
+      if (negocio || nombre) lines.push('• Negocio: ' + [negocio, nombre && '«' + nombre + '»'].filter(Boolean).join(' '));
+      if (checked('tipo')[0]) lines.push('• Necesito: ' + checked('tipo')[0]);
+      if (checked('extra').length) lines.push('• Que tenga: ' + checked('extra').join(', '));
+      if (checked('cuando')[0]) lines.push('• Para: ' + checked('cuando')[0]);
+      if (f.detalle.value.trim()) lines.push('', f.detalle.value.trim());
+      return lines.join('\n').trim();
+    };
+    var update = function () {
+      var text = buildMessage();
+      msgBox.textContent = text;
+      send.href = waBase + '?text=' + encodeURIComponent(text);
+    };
+    form.addEventListener('input', update);
+    form.addEventListener('submit', function (e) { e.preventDefault(); });
+    update();
+  }
 
   /* ---------- Enlaces aún sin definir (demos, WhatsApp, email) ---------- */
   document.querySelectorAll('a[href="#"]').forEach(function (a) {
