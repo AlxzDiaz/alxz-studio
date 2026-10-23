@@ -149,6 +149,14 @@
     form.addEventListener('input', update);
     form.addEventListener('submit', function (e) { e.preventDefault(); });
     update();
+
+    // "Cotizar este" en los paquetes: deja marcado ese tipo en el cotizador.
+    document.querySelectorAll('[data-tipo]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var opt = form.querySelector('input[name="tipo"][value="' + a.getAttribute('data-tipo') + '"]');
+        if (opt) { opt.checked = true; update(); }
+      });
+    });
   }
 
   /* ---------- Enlaces aún sin definir (demos, WhatsApp, email) ---------- */

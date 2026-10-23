@@ -547,6 +547,65 @@ svg use { fill: currentColor; }
 .hero .cta { margin-top: 40px; }
 
 /* =========================================================
+   PRICING
+   ========================================================= */
+.pricing__intro { font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.35; }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); margin-top: clamp(40px, 5vw, 64px); }
+.plan {
+  position: relative;
+  display: flex; flex-direction: column;
+  padding: clamp(28px, 3vw, 40px);
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  transition: border-color .6s var(--ease), transform .6s var(--ease);
+}
+.plan:hover { border-color: var(--line); transform: translateY(-4px); }
+.plan--featured { background: var(--card); border-color: rgba(181, 30, 34, .55); }
+.plan--featured:hover { border-color: var(--red-accent); }
+.plan__badge {
+  position: absolute; top: -1px; right: clamp(28px, 3vw, 40px);
+  padding: 6px 12px; background: var(--red);
+  font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+}
+.plan__name { font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: var(--text-2); }
+.plan__price { margin-top: 18px; font-family: var(--serif); font-size: clamp(36px, 3.4vw, 48px); line-height: 1; }
+.plan__price small { display: block; margin-bottom: 8px; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; color: var(--text-3); }
+.plan__desc { margin-top: 18px; font-size: 13.5px; color: var(--text-2); }
+.plan__plus { margin-top: 22px; font-size: 11px; letter-spacing: .08em; color: var(--red-bright); }
+.plan__list { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line-soft); flex: 1; }
+.plan__time { margin-top: 20px; font-size: 11px; letter-spacing: .08em; color: var(--text-2); }
+.plan__list li { position: relative; padding: 6px 0 6px 20px; font-size: 13.5px; line-height: 22px; }
+/* Raya dibujada (no el carácter «—»: su trazo fino se veía gris en filas alternas) */
+.plan__list li::before {
+  content: ''; position: absolute; left: 0; top: 17px;
+  width: 10px; height: 1px; background: var(--red-accent);
+}
+.plan__ex { margin-top: 8px; font-size: 11px; letter-spacing: .06em; color: var(--text-3); transition: color .4s var(--ease); }
+.plan__ex:hover { color: var(--red-bright); }
+.plan__cta { margin-top: 22px; justify-content: center; }
+.pricing__note { margin-top: 24px; font-size: 11px; letter-spacing: .06em; }
+
+.includes {
+  margin-top: clamp(16px, 2vw, 28px);
+  padding: clamp(24px, 3vw, 36px) clamp(28px, 3vw, 40px);
+  border: 1px solid var(--line-soft);
+}
+.includes ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 4px 32px; margin-top: 18px; }
+.includes li { position: relative; padding: 6px 0 6px 24px; font-size: 13.5px; line-height: 22px; color: var(--text-2); }
+.includes li::before { content: '✓'; position: absolute; left: 0; color: var(--red-bright); }
+
+
+.terms {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px);
+  margin-top: clamp(16px, 2vw, 28px);
+}
+.terms li { padding: 20px 0 0; border-top: 1px solid var(--line-soft); font-size: 13.5px; color: var(--text-2); }
+.terms .mono {
+  display: block; margin-bottom: 8px;
+  font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--white);
+}
+
+/* =========================================================
    PROCESS + FAQ
    ========================================================= */
 .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 48px); }
@@ -735,6 +794,8 @@ html:not(.js) .quote__form, html:not(.js) .quote__msg { display: none; }
 
   .contact__grid { grid-template-columns: 1fr; }
   .faq, .quote__grid { grid-template-columns: 1fr; }
+  .plans { grid-template-columns: 1fr; max-width: 520px; }
+  .terms { grid-template-columns: 1fr; }
   .quote__preview { position: static; }
 
   .footer { grid-template-columns: 1fr; }
