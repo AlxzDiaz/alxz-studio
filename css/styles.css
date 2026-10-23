@@ -12,8 +12,8 @@
 
   /* Blancos */
   --white: #E8E8E8;
-  --text-2: #A0A0A0;
-  --text-3: #7D7D7D; /* mínimo que da contraste AA (4.5:1) sobre todos los negros */
+  --text-2: #B8B8B8; /* 10:1 sobre el negro: más luminoso sin perder la noche */
+  --text-3: #8F8F8F; /* ≥5.8:1 sobre todos los negros (antes #7D7D7D, en el mínimo) */
 
   /* Rojos */
   --red: #8F1518;
@@ -495,8 +495,8 @@ svg use { fill: currentColor; }
 .cta b { font-weight: 400; transition: transform .5s var(--ease); }
 .cta:hover, .cta:focus-visible { border-color: var(--red-accent); background: rgba(143, 21, 24, .18); }
 .cta:hover b, .cta:focus-visible b { transform: translateX(4px); }
-.cta--solid { background: var(--red); border-color: var(--red); }
-.cta--solid:hover, .cta--solid:focus-visible { background: var(--red-accent); border-color: var(--red-accent); }
+.cta--solid { background: var(--red-accent); border-color: var(--red-accent); }   /* rojo vivo, 5.4:1 */
+.cta--solid:hover, .cta--solid:focus-visible { background: var(--red); border-color: var(--red); }
 .cta--solid:hover b, .cta--solid:focus-visible b { transform: translate(2px, -2px); }
 .hero .cta { margin-top: 40px; }
 
@@ -843,3 +843,11 @@ html:not(.js) .quote__form, html:not(.js) .quote__msg { display: none; }
   .step__title { font-size: 20px; }
 }
 .plans__pista { display: none; margin-top: 10px; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); }
+
+/* Línea de tranquilidad junto a los precios */
+.pricing__garantias { margin-top: 16px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-2); }
+.pricing__garantias b { font-weight: 300; color: var(--red-bright); }
+/* WhatsApp flotante: pulso suave de «disponible» */
+.wa-flotante::after { content: ''; position: absolute; inset: 0; border-radius: 50%; box-shadow: 0 0 0 0 rgba(37, 211, 102, .5); animation: wa-pulso 2.6s ease-out infinite; }
+@keyframes wa-pulso { 70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+@media (prefers-reduced-motion: reduce) { .wa-flotante::after { animation: none; } }

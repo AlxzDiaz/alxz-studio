@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada · ALXZ//</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/fuentes.css">
+<style>
+  :root { --bg: #050505; --white: #E8E8E8; --text-2: #B8B8B8; --red-accent: #B51E22; --red: #8F1518; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    min-height: 100vh; display: grid; place-items: center; padding: 24px;
+    background: radial-gradient(ellipse at 50% 40%, rgba(143, 21, 24, .18), transparent 60%), var(--bg);
+    color: var(--white); font: 300 15px/1.7 'Montserrat', system-ui, sans-serif; text-align: center;
+  }
+  svg { width: 46px; height: 46px; color: var(--white); filter: drop-shadow(0 0 18px rgba(232, 232, 232, .25)); }
+  .num { margin-top: 18px; font: 300 12px/1 'JetBrains Mono', monospace; letter-spacing: .4em; color: var(--red-accent); }
+  h1 { margin-top: 16px; font: 400 clamp(36px, 7vw, 64px)/1.05 'Playfair Display', Georgia, serif; }
+  h1 em { color: var(--text-2); }
+  p { margin-top: 14px; color: var(--text-2); }
+  .acciones { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+  a {
+    padding: 14px 24px; border: 1px solid rgba(232, 232, 232, .28); color: var(--white); text-decoration: none;
+    font: 300 11.5px/1 'JetBrains Mono', monospace; letter-spacing: .24em; text-transform: uppercase;
+  }
+  a.solido { background: var(--red-accent); border-color: var(--red-accent); }
+  a:hover { border-color: var(--red-accent); }
+  a.solido:hover { background: var(--red); }
+  a:focus-visible { outline: 1px solid #D62B30; outline-offset: 4px; }
+</style>
+</head>
+<body>
+  <main>
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 8a24 24 0 1 0 18 38A20 20 0 1 1 38 8z" fill="currentColor"/></svg>
+    <p class="num">404</p>
+    <h1>Esta página se perdió <em>a las 03:00</em>.</h1>
+    <p>La dirección no existe o cambió de lugar.</p>
+    <div class="acciones">
+      <a class="solido" href="/">Volver al inicio</a>
+      <a href="/#projects">Ver proyectos</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -19,10 +19,9 @@
 <meta property="og:locale" content="es_PE">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://images.unsplash.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<!-- Tipografías alojadas aquí (sin ir a Google): el título se pinta antes -->
+<link rel="preload" href="fonts/g/playfairdisplay-v40-nufid-vyszvivyub-rj3ij-anpxdtzyga-woff2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fuentes.css">
 <link rel="stylesheet" href="css/styles.css">
 <!-- Antes de pintar: evita que los .reveal aparezcan y desaparezcan al cargar main.js -->
 <script>document.documentElement.classList.add('js');</script>
@@ -52,7 +51,7 @@
   <span class="nav__time mono" aria-hidden="true">03:00</span>
 
   <button class="nav__toggle mono" id="navToggle" aria-expanded="false" aria-controls="navLinks">
-    <span class="nav__toggle-open">Menu</span><span class="nav__toggle-close">Close</span>
+    <span class="nav__toggle-open">Menú</span><span class="nav__toggle-close">Cerrar</span>
   </button>
 </header>
 
@@ -62,10 +61,10 @@
   <section class="hero" id="home" aria-label="ALXZ// Digital Studio">
     <div class="hero__media" aria-hidden="true">
       <img class="hero__img" data-parallax fetchpriority="high"
-           src="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=2000&q=70"
-           srcset="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=900&q=70 900w,
-                   https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=1600&q=70 1600w,
-                   https://images.unsplash.com/photo-1510519138101-570d1dca3d66?auto=format&fit=crop&w=2400&q=65 2400w"
+           src="images/fotos/portada-2000.webp"
+           srcset="images/fotos/portada-900.webp 900w,
+                   images/fotos/portada-1600.webp 1600w,
+                   images/fotos/portada-2400.webp 2400w"
            sizes="100vw" alt="">
     </div>
 
@@ -265,6 +264,7 @@
     </header>
 
     <p class="pricing__intro reveal">Precios claros y lo que incluye cada uno.<br>Si necesitas más, se cotiza antes de empezar: sin sorpresas.</p>
+    <p class="pricing__garantias mono reveal">Asesoría sin compromiso <b>·</b> 50% para empezar <b>·</b> Precios en soles</p>
 
     <div class="plans">
       <article class="plan reveal">
@@ -442,9 +442,9 @@
 
     <figure class="about__photo reveal">
       <div class="tint">
-        <img src="https://images.unsplash.com/photo-1762004793160-76327a519c0b?auto=format&fit=crop&w=900&h=1200&q=70"
-             srcset="https://images.unsplash.com/photo-1762004793160-76327a519c0b?auto=format&fit=crop&w=600&h=800&q=70 600w,
-                     https://images.unsplash.com/photo-1762004793160-76327a519c0b?auto=format&fit=crop&w=1100&h=1466&q=70 1100w"
+        <img src="images/fotos/sobre-mi-900x1200.webp"
+             srcset="images/fotos/sobre-mi-600x800.webp 600w,
+                     images/fotos/sobre-mi-1100x1466.webp 1100w"
              sizes="(max-width: 860px) 100vw, 40vw"
              alt="Calle nocturna con cables eléctricos y un semáforo encendido en rojo" loading="lazy">
       </div>
